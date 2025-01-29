@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://architecture.cloud.sap/blog</id>
+    <title>SAP Architecture Center Blog</title>
+    <updated>2025-01-29T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://architecture.cloud.sap/blog"/>
+    <subtitle>SAP Architecture Center Blog</subtitle>
+    <icon>https://architecture.cloud.sap/img/logo.svg</icon>
+    <entry>
+        <title type="html"><![CDATA[SAP Architecture Center]]></title>
+        <id>https://architecture.cloud.sap/blog/2025/01/29/launch-of-architecture-center</id>
+        <link href="https://architecture.cloud.sap/blog/2025/01/29/launch-of-architecture-center"/>
+        <updated>2025-01-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The SAP Architecture Center centralizes all resources in one place, enabling organizations to maximize cloud capabilities while ensuring that their solutions are secure, resilient, and optimized to their specific requirements.]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introducing-the-architecture-center">Introducing the Architecture Center<a href="https://architecture.cloud.sap/blog/2025/01/29/launch-of-architecture-center#introducing-the-architecture-center" class="hash-link" aria-label="Direct link to Introducing the Architecture Center" title="Direct link to Introducing the Architecture Center">​</a></h2>
+<p>We are thrilled to announce the launch of the SAP Architecture Center, a new platform dedicated to creating, exploring, sharing, and advancing the world of reference architectures in the SAP ecosystem. While our site is still in its early stages of development, we are excited to share our vision and invite you to be part of this journey from the very beginning.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-to-expect">What to Expect<a href="https://architecture.cloud.sap/blog/2025/01/29/launch-of-architecture-center#what-to-expect" class="hash-link" aria-label="Direct link to What to Expect" title="Direct link to What to Expect">​</a></h2>
+<p>The Architecture Center aims to be a hub for architects, developers, consultants, and enthusiasts who are passionate about the reference architectures.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="a-work-in-progress">A Work in Progress<a href="https://architecture.cloud.sap/blog/2025/01/29/launch-of-architecture-center#a-work-in-progress" class="hash-link" aria-label="Direct link to A Work in Progress" title="Direct link to A Work in Progress">​</a></h2>
+<p>As we continue to build and refine the Architecture Center, some features may not yet be available. However, we are working diligently to enhance the experience and introduce new elements in the coming months. Your feedback will be invaluable in shaping the platform into a resource that serves the architectural community.</p>
+<p>We invite you to explore our site, follow our updates, and become part of our growing community of practice.</p>]]></content>
+        <author>
+            <name>Pierre-Olivier Basseville</name>
+            <uri>https://github.com/cernus76</uri>
+        </author>
+        <author>
+            <name>James Rapp</name>
+            <uri>https://github.com/jmsrpp</uri>
+        </author>
+    </entry>
+</feed>
