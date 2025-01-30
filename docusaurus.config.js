@@ -13,7 +13,7 @@ const config = {
     baseUrl: '/',
 
     // GitHub pages deployment config.
-    organizationName: 'sap', //GitHub org
+    organizationName: 'SAP', //GitHub org
     projectName: 'architecture-center', // repo name
     deploymentBranch: 'site',
     trailingSlash: false,
@@ -21,7 +21,7 @@ const config = {
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'throw',
     onDuplicateRoutes: 'throw',
-    onBrokenMarkdownLinks: 'warn',
+    onBrokenAnchors: 'warn',
 
     plugins: [
         [require.resolve('docusaurus-plugin-image-zoom'), {}],
