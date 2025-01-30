@@ -13,13 +13,15 @@ const config = {
     baseUrl: '/',
 
     // GitHub pages deployment config.
-    organizationName: 'jmsrpp', //GitHub org
+    organizationName: 'sap', //GitHub org
     projectName: 'architecture-center', // repo name
     deploymentBranch: 'site',
     trailingSlash: false,
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'throw',
+    onDuplicateRoutes: 'throw',
+    onBrokenMarkdownLinks: 'warn',
 
     plugins: [
         [require.resolve('docusaurus-plugin-image-zoom'), {}],
