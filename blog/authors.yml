@@ -4,7 +4,7 @@ jmsrpp:
   url: https://github.com/jmsrpp
   image_url: https://github.com/jmsrpp.png
   page: true
-  # valid socials are github, x, linkedin, stackoverflow
+  # valid socials are "x", "github", "twitter", "linkedin", "stackoverflow", "instagram", "bluesky", "mastodon", "threads", "twitch", "youtube"
   socials:
     github: jmsrpp
     linkedin: james-rapp-40a6311
@@ -15,8 +15,19 @@ cernus76:
   url: https://github.com/cernus76
   image_url: https://github.com/cernus76.png
   page: true
-  # valid socials are github, x, linkedin, stackoverflow
+  # valid socials are "x", "github", "twitter", "linkedin", "stackoverflow", "instagram", "bluesky", "mastodon", "threads", "twitch", "youtube"
   socials:
     github: cernus76
     linkedin: pierreolivierbasseville
+
+anirban-sap:
+  name: Anirban Majumdar
+  title: Head of the Platform Architecture & Adoption
+  url: https://github.com/anirban-sap
+  image_url: https://github.com/anirban-sap.png
+  page: true
+  # valid socials are "x", "github", "twitter", "linkedin", "stackoverflow", "instagram", "bluesky", "mastodon", "threads", "twitch", "youtube"
+  socials:
+    github: anirban-sap
+    linkedin: -anirban-majumdar
     
