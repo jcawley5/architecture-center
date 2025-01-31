@@ -752,7 +752,7 @@ html[data-theme='dark'] .navbar-item-github {
 
 /* Custom styling for main content (excludes header, footer, sidebar) */
 html[data-theme='light'] .main-wrapper {
-    background-color: #f3f3f3; 
+    background-color: #f5f6f7; 
   }
 
 html[data-theme='light'] .navbar {
@@ -766,7 +766,7 @@ html[data-theme='light'] .footer {
 }
 
 html[data-theme='light'] .menu {
-    background-color: #f5f6f7;
+    background-color: #f3f3f3;
 }
 
 html[data-theme='dark'] .footer {
