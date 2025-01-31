@@ -756,7 +756,7 @@ html[data-theme='light'] .main-wrapper {
   }
 
 html[data-theme='light'] .navbar {
-    background: linear-gradient(to bottom, #78baf5 0%, #d6ebfd 100%);
+    background: linear-gradient(to bottom right, #7dbeff 40%, #d6ebfd 80%);
     border-bottom: 2px solid #d0d2d4;
     backdrop-filter: blur(10px);
 }
@@ -775,7 +775,7 @@ html[data-theme='dark'] .footer {
 }
 
 html[data-theme='dark'] .navbar {
-    background: linear-gradient(to bottom, #0a6ed1 0%, #001848 100%);
+    background: linear-gradient(to top left, #0a6ed1 0%, #001848 50%);
     border-bottom: 2px solid #003366 ;
     backdrop-filter: blur(10px);
 }
