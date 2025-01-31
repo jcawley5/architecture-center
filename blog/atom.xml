@@ -21,12 +21,16 @@
 <p>As we continue to build and refine the Architecture Center, some features may not yet be available. However, we are working diligently to enhance the experience and introduce new elements in the coming months. Your feedback will be invaluable in shaping the platform into a resource that serves the architectural community.</p>
 <p>We invite you to explore our site, follow our updates, and become part of our growing community of practice.</p>]]></content>
         <author>
-            <name>Pierre-Olivier Basseville</name>
-            <uri>https://github.com/cernus76</uri>
+            <name>Anirban Majumdar</name>
+            <uri>https://github.com/anirban-sap</uri>
         </author>
         <author>
             <name>James Rapp</name>
             <uri>https://github.com/jmsrpp</uri>
+        </author>
+        <author>
+            <name>Pierre-Olivier Basseville</name>
+            <uri>https://github.com/cernus76</uri>
         </author>
     </entry>
 </feed>
