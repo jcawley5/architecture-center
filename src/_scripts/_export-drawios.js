@@ -25,7 +25,7 @@ try {
 
 const files = readdirSync(SEARCH_DIR, { recursive: true });
 const drawios = files.filter((file) => file.match(/\.drawio$/));
-log(`Found ${drawios.length} drawios to export to svg`);
+log(`Found ${drawios.length} drawios to export to svg\n`);
 
 const transforms = {};
 // drawio as in RA0001/drawio/Events-to-business-actions-framework.drawio
@@ -42,13 +42,14 @@ for (const [input, out] of Object.entries(transforms)) {
     try {
         // try sync variant first to not overwhelm runner in GitHub workflow
         const stdout = execSync(cmd, { encoding: 'utf8' });
-        log(stdout.replaceAll('docs/ref-arch/', ''));
+        log(stdout.replaceAll('docs/ref-arch/', '').replaceAll('\n', ''));
     } catch (e) {
         const msg = `Export failed ${prettyPath(input)} -> ${prettyPath(out)}, aborting now`;
         // let's fail early
         throw new Error(msg, { cause: e });
     }
 }
+log('\n');
 
 function prepareCommand(input, out) {
     // make relative, docker doesn't have same dir structure
@@ -71,7 +72,12 @@ for (const [drawioPath, svgPath] of Object.entries(transforms)) {
     const height = parseInt(viewBox[3]);
     const width = parseInt(viewBox[2]);
     // finding these exact values is a bit trial and error
-    viewBox[3] = height + 80;
+    const pad = 10;
+    viewBox[0] = -pad;
+    viewBox[1] = -pad;
+    // pad*2 to have ~same padding right/left and top/bottom
+    viewBox[2] = width + pad * 2;
+    viewBox[3] = height + 74 + pad * 2;
     const textX = 182;
     const logoDownScale = 0.35;
 
@@ -91,14 +97,15 @@ for (const [drawioPath, svgPath] of Object.entries(transforms)) {
                         <image href="data:image/svg+xml;base64,${Buffer.from(logo).toString('base64')}" />
                     </g>`;
 
-        const bg = `<rect x="0" y="0" width="${width}" height="${viewBox[3]}" fill="${SVG_BACKGROUND_COLOR}"/>`;
+        const bg = `<rect x="${-pad}" y="${-pad}" width="${viewBox[2]}" height="${viewBox[3]}" fill="${SVG_BACKGROUND_COLOR}"/>`;
         svg = svg
             // leave svg opening tag unchanged, but add rect element to set background color
             .replace(/<svg([^>]*)>/, '<svg$1>' + bg)
             .replace(/<\/svg>$/, mark + '</svg>')
             .replace(/viewBox="([^"]*)"/, `viewBox="${viewBox.join(' ')}"`)
             // height attribute was set to same as viewbox height, so update it too
-            .replace(/height="([^"]*)"/, `height="${viewBox[3]}"`);
+            .replace(/height="([^"]*)"/, `height="${viewBox[3]}"`)
+            .replace(/width="([^"]*)"/, `width="${viewBox[2]}"`);
 
         writeFileSync(svgPath, svg);
         log('Watermarked ' + prettyPath(svgPath));
