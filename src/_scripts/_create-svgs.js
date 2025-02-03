@@ -14,10 +14,11 @@ const DRAWIO_CLI_MAC_BINARY = '/Applications/draw.io.app/Contents/MacOS/draw.io'
 const SEARCH_DIR = __dirname + '/../../docs/ref-arch';
 const SAP_LOGO = __dirname + '/../../static/img/logo.svg';
 const FONT_SIZE_DEFAULT = 18;
+const SVG_BACKGROUND_COLOR = '#ffffff';
 
 try {
-    execSync(DRAWIO_CLI_MAC_BINARY + " -h", { encoding: 'utf8' });
-} catch(e) {
+    execSync(DRAWIO_CLI_MAC_BINARY + ' -h', { encoding: 'utf8' });
+} catch (e) {
     const msg = `Cannot find Drawio executable at ${DRAWIO_CLI_MAC_BINARY}. For now only Mac is supported. Set DOCKER=1 to run Drawio CLI via docker (if installed)`;
     throw new Error(msg, { cause: e });
 }
@@ -41,7 +42,7 @@ for (const [input, out] of Object.entries(transforms)) {
     try {
         // try sync variant first to not overwhelm runner in GitHub workflow
         const stdout = execSync(cmd, { encoding: 'utf8' });
-        log(stdout.replaceAll("docs/ref-arch/", ""));
+        log(stdout.replaceAll('docs/ref-arch/', ''));
     } catch (e) {
         const msg = `Export failed ${prettyPath(input)} -> ${prettyPath(out)}, aborting now`;
         // let's fail early
@@ -68,6 +69,7 @@ for (const [drawioPath, svgPath] of Object.entries(transforms)) {
     let svg = readFileSync(svgPath, 'utf8');
     const viewBox = svg.match(/viewBox="([^"]*)"/)[1].split(' ');
     const height = parseInt(viewBox[3]);
+    const width = parseInt(viewBox[2]);
     // finding these exact values is a bit trial and error
     viewBox[3] = height + 80;
     const textX = 182;
@@ -83,13 +85,16 @@ for (const [drawioPath, svgPath] of Object.entries(transforms)) {
 
         const logo = readFileSync(SAP_LOGO, 'utf8');
         const mark = `<text x="${textX}" y="${height + 34}" font-family="Arial" font-size="${FONT_SIZE_DEFAULT}">
-        Last update <tspan font-style="italic">${lastUpdate}</tspan>
-      </text>
-      <g transform="translate(70, ${height + 14}) scale(${logoDownScale} ${logoDownScale})">
-        <image href="data:image/svg+xml;base64,${Buffer.from(logo).toString('base64')}" />
-      </g>`;
+                        Last update <tspan font-style="italic">${lastUpdate}</tspan>
+                    </text>
+                    <g transform="translate(70, ${height + 14}) scale(${logoDownScale} ${logoDownScale})">
+                        <image href="data:image/svg+xml;base64,${Buffer.from(logo).toString('base64')}" />
+                    </g>`;
 
+        const bg = `<rect x="0" y="0" width="${width}" height="${viewBox[3]}" fill="${SVG_BACKGROUND_COLOR}"/>`;
         svg = svg
+            // leave svg opening tag unchanged, but add rect element to set background color
+            .replace(/<svg([^>]*)>/, '<svg$1>' + bg)
             .replace(/<\/svg>$/, mark + '</svg>')
             .replace(/viewBox="([^"]*)"/, `viewBox="${viewBox.join(' ')}"`)
             // height attribute was set to same as viewbox height, so update it too
