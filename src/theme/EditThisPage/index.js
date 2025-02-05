@@ -5,7 +5,12 @@ import IconEdit from '@theme/Icon/Edit';
 
 export default function EditThisPage({ editUrl }) {
     return (
-        <Link to={editUrl} className={ThemeClassNames.common.editThisPage} title="Edit this page">
+        <Link
+            to={editUrl}
+            title="Edit this page"
+            className={ThemeClassNames.common.editThisPage}
+            style={{ lineHeight: 1 }}
+        >
             <IconEdit />
         </Link>
     );

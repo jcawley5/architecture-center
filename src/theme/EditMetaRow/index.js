@@ -20,9 +20,12 @@ export default function EditMetaRow({ className, editUrl, lastUpdatedAt, lastUpd
                 )}
             </div>
 
-            <div className={clsx('col', styles.editLink)} style={{ display: 'flex', flexDirection: 'row' }}>
+            <div
+                className={clsx('col', styles.editLink)}
+                style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start' }}
+            >
                 {editUrl && <EditThisPage editUrl={editUrl} />}
-                <div style={{ display: 'flex', marginLeft: 10, paddingTop: 4 }}>
+                <div style={{ marginLeft: 10 }}>
                     <ShareSite />
                 </div>
             </div>
