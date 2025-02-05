@@ -1,4 +1,4 @@
-import { EmailShareButton, EmailIcon, LinkedinShareButton } from 'react-share';
+import { EmailShareButton, LinkedinShareButton } from 'react-share';
 import LinkedInIcon from '@theme/Icon/Socials/LinkedIn';
 import { Icon } from '@ui5/webcomponents-react';
 import '@ui5/webcomponents-icons/dist/paper-plane.js';
