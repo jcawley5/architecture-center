@@ -6,15 +6,16 @@ sidebar_custom_props: {}
 title: Introduction and SAP's EDA Strategy
 description: Understanding Event-Driven Architecture, Core Concepts and Building Blocks.
 keywords:
- - sap
- - btp
- - integration
- - event-driven architecture
- - azure 
- - aws 
- - genai
- - cloud application programming model
- - cap
+  - sap
+  - btp
+  - integration
+  - event-driven architecture
+  - azure 
+  - aws 
+  - genai
+  - cloud application programming model
+  - cap
+  - eda
 sidebar_label: Introduction and SAP's EDA Strategy
 image: img/logo.svg
 tags:
@@ -23,6 +24,7 @@ tags:
   - genai
   - integration
   - appdev
+  - eda
 hide_table_of_contents: false
 hide_title: false
 toc_min_heading_level: 2

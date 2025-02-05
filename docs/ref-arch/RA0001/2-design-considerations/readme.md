@@ -6,15 +6,16 @@ sidebar_custom_props: {}
 title: Design Considerations for EDA Applications
 description: Understand key challenges, key design patterns and key considerations from platform, technical services,when building event-driven architecture based applications.
 keywords:
- - sap
- - btp
- - integration
- - event-driven architecture
- - azure 
- - aws 
- - genai
- - cloud application programming model
- - cap
+  - sap
+  - btp
+  - integration
+  - event-driven architecture
+  - azure 
+  - aws 
+  - genai
+  - cloud application programming model
+  - cap
+  - eda
 sidebar_label: Design Considerations for EDA Applications
 image: img/logo.svg
 tags:
@@ -23,6 +24,7 @@ tags:
   - genai
   - integration
   - appdev
+  - eda
 hide_table_of_contents: false
 hide_title: false
 toc_min_heading_level: 2
