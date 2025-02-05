@@ -1,7 +1,7 @@
 name: PR Build Check
 
 on:
-    pull_request:
+    pull_request_target:
         branches:
             - main
         types:
@@ -11,12 +11,13 @@ on:
 
 jobs:
     build:
-        name: Build Docusaurus
+        name: Build Site for PR
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
               with:
-                  fetch-depth: 0
+                  ref: ${{ github.event.pull_request.head.ref }}
+                  repository: ${{ github.event.pull_request.head.repo.full_name }}
             - uses: actions/setup-node@v4
               with:
                   node-version: 18
@@ -26,8 +27,3 @@ jobs:
               run: npm ci
             - name: Build website
               run: npm run build
-
-            - name: Upload Build Artifact
-              uses: actions/upload-pages-artifact@v3
-              with:
-                  path: build

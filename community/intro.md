@@ -44,7 +44,7 @@ Refer to the [Contribution Guidelines](community/Guidelines/contribution.md) for
 
 ## Support, Feedback, Contributing
 
-This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/SAP/architecture-center/issues). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](community/Guidelines/contribution.md).
+This project is open to feature requests/suggestions, bug reports etc. via [GitHub issues](https://github.com/SAP/architecture-center/issues/new/choose). Contribution and feedback are encouraged and always welcome. For more information about how to contribute, the project structure, as well as additional contribution information, see our [Contribution Guidelines](community/Guidelines/contribution.md).
 
 ❓ - If you have a *question* you can ask it here in [GitHub Discussions](https://github.com/SAP/architecture-center/discussions).
 

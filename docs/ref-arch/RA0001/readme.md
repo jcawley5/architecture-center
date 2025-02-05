@@ -9,15 +9,16 @@ sidebar_custom_props:
 title: Reference Architecture for Event-Driven Applications on SAP BTP
 description: Guidance for developing end-to-end integrated applications based on Event-Driven Architecture (EDA) in SAP BTP. Reference Architecture on how to implement using SAP's EDA Technonology options and CAP for building custom EDA extension application.
 keywords:
- - sap
- - btp
- - integration
- - event-driven architecture
- - azure 
- - aws 
- - genai
- - cloud application programming model
- - cap
+  - sap
+  - btp
+  - integration
+  - event-driven architecture
+  - azure 
+  - aws 
+  - genai
+  - cloud application programming model
+  - cap
+  - eda
 sidebar_label: Event-Driven Architecture Application on SAP BTP
 image: img/logo.svg
 tags:
@@ -26,6 +27,7 @@ tags:
   - genai
   - integration
   - appdev
+  - eda
 hide_table_of_contents: false
 hide_title: false
 toc_min_heading_level: 2

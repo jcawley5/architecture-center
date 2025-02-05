@@ -19,28 +19,24 @@ export default function ShareSite() {
         <>
             <EmailShareButton
                 url={url}
-                style={{ display: 'flex' }}
+                style={{ lineHeight: 1 }}
                 subject={'SAP Architecture Center - ' + pgTitle}
                 body={`Hey,\n\nI found this and thought you might like it.\n\n`}
                 // sets title of underlying button, so it shows tooltip
                 htmlTitle="Send by email"
             >
-                <Icon
-                    style={{ marginTop: -1, width: 20, height: 20, color: '#0070F2' }}
-                    name="paper-plane"
-                    design="Neutral"
-                />
+                <Icon style={{ width: 20, height: 20, color: '#0070F2' }} name="paper-plane" />
             </EmailShareButton>
             <LinkedinShareButton
                 url={url}
-                style={{ display: 'flex', marginLeft: ICON_MARGIN_LEFT }}
+                style={{ marginLeft: ICON_MARGIN_LEFT, lineHeight: 1 }}
                 htmlTitle="Share on LinkedIn"
             >
                 <LinkedInIcon width={ICON_SIZE} height={ICON_SIZE} />
             </LinkedinShareButton>
             <TwitterShareButton
                 url={url}
-                style={{ marginLeft: ICON_MARGIN_LEFT, display: 'flex' }}
+                style={{ marginLeft: ICON_MARGIN_LEFT, lineHeight: 1 }}
                 title={`Just found this on ${pgTitle}. Check it out!`}
                 htmlTitle="Share on X"
             >
