@@ -6,14 +6,15 @@ sidebar_custom_props: {}
 title: Build Events-to-Business Actions Scenarios with SAP BTP and Microsoft Azure
 description: Sample application for building event-driven architecture application with Microsoft Azure IoT as event source. Assess the critical events and publish to SAP BTP for validation and processing the business processes operations in SAP S/4HANA.
 keywords:
- - sap
- - btp
- - integration
- - event-driven architecture
- - azure 
- - genai
- - cloud application programming model
- - cap
+    - sap
+    - btp
+    - integration
+    - event-driven architecture
+    - azure 
+    - genai
+    - cloud application programming model
+    - cap
+    - eda
 sidebar_label: Integration with Microsoft Azure
 image: img/logo.svg
 tags:
@@ -21,6 +22,7 @@ tags:
   - azure
   - appdev
   - integration
+  - eda
 hide_table_of_contents: false
 hide_title: false
 toc_min_heading_level: 2
