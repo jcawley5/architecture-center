@@ -1,6 +1,6 @@
 const { readdirSync, readFileSync, writeFileSync } = require('node:fs');
 const { execSync } = require('node:child_process');
-const { normalize: normalizePath, relative } = require('node:path');
+const { normalize: normalizePath } = require('node:path');
 
 // SCRIPT CAN BE RUN NATIVELY ON MAC OR VIA DOCKER.
 // THE FORMER REQUIRES DRAWIO TO BE INSTALLED
@@ -16,11 +16,13 @@ const SAP_LOGO = __dirname + '/../../static/img/logo.svg';
 const FONT_SIZE_DEFAULT = 18;
 const SVG_BACKGROUND_COLOR = '#ffffff';
 
-try {
-    execSync(DRAWIO_CLI_MAC_BINARY + ' -h', { encoding: 'utf8' });
-} catch (e) {
-    const msg = `Cannot find Drawio executable at ${DRAWIO_CLI_MAC_BINARY}. For now only Mac is supported. Set DOCKER=1 to run Drawio CLI via docker (if installed)`;
-    throw new Error(msg, { cause: e });
+if (!DOCKER) {
+    try {
+        execSync(DRAWIO_CLI_MAC_BINARY + ' -h', { encoding: 'utf8' });
+    } catch (e) {
+        const msg = `Cannot find Drawio executable at ${DRAWIO_CLI_MAC_BINARY}. For now only Mac is supported. Set DOCKER=1 to run Drawio CLI via docker (if installed)`;
+        throw new Error(msg, { cause: e });
+    }
 }
 
 const files = readdirSync(SEARCH_DIR, { recursive: true });
