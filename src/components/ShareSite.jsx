@@ -1,6 +1,5 @@
-import { EmailShareButton, EmailIcon, LinkedinShareButton, TwitterShareButton } from 'react-share';
+import { EmailShareButton, LinkedinShareButton } from 'react-share';
 import LinkedInIcon from '@theme/Icon/Socials/LinkedIn';
-import XIcon from '@theme/Icon/Socials/X';
 import { Icon } from '@ui5/webcomponents-react';
 import '@ui5/webcomponents-icons/dist/paper-plane.js';
 import '@ui5/webcomponents-icons/dist/email.js';
@@ -34,14 +33,6 @@ export default function ShareSite() {
             >
                 <LinkedInIcon width={ICON_SIZE} height={ICON_SIZE} />
             </LinkedinShareButton>
-            <TwitterShareButton
-                url={url}
-                style={{ marginLeft: ICON_MARGIN_LEFT, lineHeight: 1 }}
-                title={`Just found this on ${pgTitle}. Check it out!`}
-                htmlTitle="Share on X"
-            >
-                <XIcon width={ICON_SIZE} height={ICON_SIZE} />
-            </TwitterShareButton>
         </>
     );
 }
