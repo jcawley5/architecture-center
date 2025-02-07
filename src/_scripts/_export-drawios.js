@@ -100,7 +100,7 @@ for (const [drawioPath, svgPath] of Object.entries(transforms)) {
         });
 
         const revert = 30;
-        const logo = readFileSync(SAP_LOGO, 'utf8');
+        const logoSvg = readFileSync(SAP_LOGO, 'utf8');
         const mark = `<text x="0" y="${pad}" font-family="Arial" font-weight="bold" font-size="22">
                         Solution Diagram Title
                     </text>
@@ -112,7 +112,7 @@ for (const [drawioPath, svgPath] of Object.entries(transforms)) {
                         Last update on ${lastUpdate}
                     </text>
                     <g transform="translate(0, ${logo.y})">
-                        <image width="${logo.w}" height="${logo.h}" href="data:image/svg+xml;base64,${Buffer.from(logo).toString('base64')}" />
+                        <image width="${logo.w}" height="${logo.h}" href="data:image/svg+xml;base64,${Buffer.from(logoSvg).toString('base64')}" />
                     </g>
                     <text x="${width / 2}" y="${logo.y + 36}" font-family="Arial" font-size="18">
                         ${URL}
