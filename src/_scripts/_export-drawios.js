@@ -14,9 +14,7 @@ const DRAWIO_CLI_MAC_BINARY = '/Applications/draw.io.app/Contents/MacOS/draw.io'
 const SEARCH_DIR = __dirname + '/../../docs/ref-arch';
 const SAP_LOGO = __dirname + '/../../static/img/logo.svg';
 const SVG_BACKGROUND_COLOR = '#ffffff';
-const URL = "https://architecture.cloud.sap";
-
-const single = process.argv[2];
+const URL = 'https://architecture.cloud.sap';
 
 if (!DOCKER) {
     try {
@@ -31,8 +29,7 @@ const files = readdirSync(SEARCH_DIR, { recursive: true });
 const drawios = files.filter((file) => file.match(/\.drawio$/));
 log(`Found ${drawios.length} drawios to export to svg\n`);
 
-// TODO: make his const again later
-let transforms = {};
+const transforms = {};
 // drawio as in RA0001/drawio/Events-to-business-actions-framework.drawio
 for (const drawio of drawios) {
     // Events-to-business-actions-framework part
@@ -41,14 +38,6 @@ for (const drawio of drawios) {
     transforms[`${SEARCH_DIR}/${drawio}`] = svg;
 }
 
-if (single) {
-    log("single is", single)
-    const k = Object.keys(transforms).find(k => k.includes(single));
-    transforms = { [k]: transforms[k] };
-    log("now it's", JSON.stringify(transforms))
-}
-
-// throw new Error("stop")
 // export all drawios to svgs
 for (const [input, out] of Object.entries(transforms)) {
     const cmd = prepareCommand(input, out);
@@ -85,19 +74,23 @@ for (const [drawioPath, svgPath] of Object.entries(transforms)) {
     const height = parseInt(viewBox[3]);
     const width = parseInt(viewBox[2]);
     // finding these exact values is a bit trial and error..
-    const pad = 20; // additional padding to the one drawio itself already has
+    const pad = 20;
     viewBox[0] = -pad;
     viewBox[1] = -pad;
-    // add padding left/right
-    viewBox[2] = width + pad*2 + 100;
-    const hLogo = 52;
-    const wLogo = 106;
-    // margin top of logo
-    const mtLogo = 30;
-    const yLogo = height + mtLogo;
-    const shift = 38;
-    viewBox[3] = height + pad*2 + mtLogo + hLogo + shift;
-    const textX = wLogo + pad;
+    viewBox[2] = width + pad * 2; // add padding left/right
+    const logo = {
+        h: 52,
+        w: 106,
+        // margin top of logo
+        mt: 30,
+    };
+    logo.y = height + logo.mt;
+    // have now title of solution diagram on top
+    // need to shift everything else
+    const yShift = 38;
+    viewBox[3] = height + pad * 2 + logo.mt + logo.h + yShift;
+    const textX = logo.w + pad;
+
     try {
         const iso = execSync(`git log -1 --format=%cd --date=iso "${drawioPath}"`);
         const lastUpdate = new Date(iso).toLocaleDateString('en-US', {
@@ -111,17 +104,17 @@ for (const [drawioPath, svgPath] of Object.entries(transforms)) {
         const mark = `<text x="0" y="${pad}" font-family="Arial" font-weight="bold" font-size="22">
                         Solution Diagram Title
                     </text>
-                    <g transform="translate(0, ${shift})">
-                    <text x="${textX}" y="${yLogo + 20}" font-family="Arial" font-weight="bold" font-size="20">
+                    <g transform="translate(0, ${yShift})">
+                    <text x="${textX}" y="${logo.y + 20}" font-family="Arial" font-weight="bold" font-size="20">
                         Architecture Center
                     </text>
-                    <text x="${textX}" y="${yLogo + hLogo - 4}" font-family="Arial" font-style="italic" font-size="16">
+                    <text x="${textX}" y="${logo.y + logo.h - 4}" font-family="Arial" font-style="italic" font-size="16">
                         Last update on ${lastUpdate}
                     </text>
-                    <g transform="translate(0, ${yLogo})">
-                        <image width="${wLogo}" height="${hLogo}" href="data:image/svg+xml;base64,${Buffer.from(logo).toString('base64')}" />
+                    <g transform="translate(0, ${logo.y})">
+                        <image width="${logo.w}" height="${logo.h}" href="data:image/svg+xml;base64,${Buffer.from(logo).toString('base64')}" />
                     </g>
-                    <text x="${width/2}" y="${yLogo + 36}" font-family="Arial" font-size="18">
+                    <text x="${width / 2}" y="${logo.y + 36}" font-family="Arial" font-size="18">
                         ${URL}
                     </text>
                     </g>`;
@@ -131,7 +124,7 @@ for (const [drawioPath, svgPath] of Object.entries(transforms)) {
             // leave svg opening tag unchanged, but add rect element to set background color
             .replace(/<svg([^>]*)>/, '<svg$1>' + bg)
             // this g contains the diagram
-            .replace("<g>", `<g transform="translate(0, ${shift})">`)
+            .replace('<g>', `<g transform="translate(0, ${yShift})">`)
             .replace(/<\/svg>$/, mark + '</svg>')
             .replace(/viewBox="([^"]*)"/, `viewBox="${viewBox.join(' ')}"`)
             // height attribute was set to same as viewbox height, so update it too
