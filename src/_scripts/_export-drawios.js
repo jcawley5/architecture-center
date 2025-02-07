@@ -99,10 +99,12 @@ for (const [drawioPath, svgPath] of Object.entries(transforms)) {
             day: 'numeric',
         });
 
-        const revert = 30;
         const logoSvg = readFileSync(SAP_LOGO, 'utf8');
+        const frontmatter = readFileSync(drawioPath.split("drawio/")[0] + "readme.md", 'utf8').split("---")[1];
+        const title = frontmatter.match(/^title:\s?(.*)$/m)[1];
+        const slug = frontmatter.match(/^slug:\s?(.*)$/m)[1];
         const mark = `<text x="0" y="${pad}" font-family="Arial" font-weight="bold" font-size="22">
-                        Solution Diagram Title
+                        <![CDATA[${title}]]>
                     </text>
                     <g transform="translate(0, ${yShift})">
                     <text x="${textX}" y="${logo.y + 20}" font-family="Arial" font-weight="bold" font-size="20">
@@ -115,7 +117,7 @@ for (const [drawioPath, svgPath] of Object.entries(transforms)) {
                         <image width="${logo.w}" height="${logo.h}" href="data:image/svg+xml;base64,${Buffer.from(logoSvg).toString('base64')}" />
                     </g>
                     <text x="${width / 2}" y="${logo.y + 36}" font-family="Arial" font-size="18">
-                        ${URL}
+                        ${URL + slug}
                     </text>
                     </g>`;
 
