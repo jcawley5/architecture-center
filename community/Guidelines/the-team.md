@@ -28,7 +28,7 @@ The Team behind the SAP Architecture Center.
 
 ## The core team
 
-They have been there from the very beginning, contributing to everything from framework exploration to small proof-of-concepts.
+They have been there from the very beginning, contributing to everything from framework exploration to small proof-of-concepts, while also shaping the architecture and governance.
 
 | Name | Role | Picture |
 | :--- | :--- | :---: |
