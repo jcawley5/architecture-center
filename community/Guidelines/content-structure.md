@@ -1,11 +1,11 @@
 ---
 sidebar_position: 4
-slug: /folder-structure
-title: Folder Structure
-sidebar_label: Folder Structure
+slug: /content-structure
+title: Content Structure
+sidebar_label: Content Structure
 keywords:
  - sap
- - folder structure
+ - content structure
 image: img/logo.svg
 tags:
   - community
@@ -24,10 +24,10 @@ last_update:
   date: 2025-02-11
 ---
 
-A folder structure has been defined and is similar for all reference architectures.
+The content structure has been defined and is identical for all reference architectures.
 
 ## Example
-Here is an example of the folder structure for a reference architecture:
+Here is an example of the content structure for a reference architecture:
 
 ```bash
 ref-arch/
