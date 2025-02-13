@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 99
 slug: /team
 title: The team
 sidebar_label: The team
