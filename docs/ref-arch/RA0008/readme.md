@@ -16,14 +16,14 @@ sidebar_custom_props: # [DO NOT MODIFY]
 title: Edge Integration Cell on Hyperscalers
 description: Discover reference architectures for deploying SAP Integration Suite - Edge Integration Cell on hyperscalers. Access architecture diagrams and key resources to understand its setup and implementation.
 sidebar_label: Edge Integration Cell on Hyperscalers
-keywords: [sap,eic,aws,azure,gcp]
+keywords: [sap, eic, aws, azure, gcp, edge integration cell]
 image: img/logo.svg
-tags: [aws,eic,azure,gcp]
+tags: [aws, eic, azure, gcp]
 hide_table_of_contents: false
 hide_title: false
 toc_min_heading_level: 2
 toc_max_heading_level: 4
-draft: true
+draft: false
 unlisted: false
 contributors:
   - adarshnarayanhegde
