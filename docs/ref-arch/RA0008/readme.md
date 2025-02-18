@@ -10,6 +10,8 @@ sidebar_custom_props: # [DO NOT MODIFY]
     - aws
     - gcp
     - azure
+    - integration
+    - appdev
 ############################################################
 #     You can modify the front matter properties below     #
 ############################################################
