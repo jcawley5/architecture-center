@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Select from "react-select";
+import Select, { MultiValue } from "react-select"; // Import MultiValue
 import { PageMetadata } from "@docusaurus/theme-common";
 import { useCurrentSidebarCategory } from "@docusaurus/plugin-content-docs/client";
 import useBaseUrl from "@docusaurus/useBaseUrl";
@@ -129,6 +129,15 @@ function DocCategoryGeneratedIndexPageContent({
         })
       : preFilteredItems;
 
+  // Handle select changes correctly
+  const handlePartnersChange = (newValue: MultiValue<{ value: string; label: string }>) => {
+    setSelectedPartners(newValue as { value: string; label: string }[]); // Type assertion
+  };
+
+  const handleTechDomainsChange = (newValue: MultiValue<{ value: string; label: string }>) => {
+    setSelectedTechDomains(newValue as { value: string; label: string }[]); // Type assertion
+  };
+
   return (
     <div>
       <DocVersionBanner />
@@ -153,7 +162,7 @@ function DocCategoryGeneratedIndexPageContent({
                   isMulti
                   options={partners}
                   value={selectedPartners}
-                  onChange={setSelectedPartners}
+                  onChange={handlePartnersChange} // Use the handler
                   placeholder="Select Partners..."
                   styles={selectStyles} 
                 />
@@ -167,7 +176,7 @@ function DocCategoryGeneratedIndexPageContent({
                   isMulti
                   options={techDomains}
                   value={selectedTechDomains}
-                  onChange={setSelectedTechDomains}
+                  onChange={handleTechDomainsChange} // Use the handler
                   placeholder="Select Technology Domains..."
                   styles={selectStyles} 
                 />
