@@ -616,12 +616,12 @@ table thead {
 
 @media screen and (max-width: 996px) {
     /* Force the background to match the footer */
-    html[data-theme='light'], 
+    html[data-theme='light'],
     body[data-theme='light'] {
         background-color: #e0e0e0 !important;
     }
 
-    html[data-theme='dark'], 
+    html[data-theme='dark'],
     body[data-theme='dark'] {
         background-color: #0e0f19 !important;
     }
@@ -760,8 +760,8 @@ html[data-theme='dark'] .navbar-item-github {
 
 /* Custom styling for main content (excludes header, footer, sidebar) */
 html[data-theme='light'] .main-wrapper {
-    background-color: #f5f6f7; 
-  }
+    background-color: #f5f6f7;
+}
 
 html[data-theme='light'] .navbar {
     background: linear-gradient(to bottom right, #7dbeff 40%, #d6ebfd 80%);
@@ -784,7 +784,7 @@ html[data-theme='dark'] .footer {
 
 html[data-theme='dark'] .navbar {
     background: linear-gradient(to top left, #0a6ed1 0%, #001848 50%);
-    border-bottom: 2px solid #003366 ;
+    border-bottom: 2px solid #003366;
     backdrop-filter: blur(10px);
 }
 
@@ -795,7 +795,6 @@ html[data-theme='dark'] .navbar {
     }
 }
 
-
 /* The following styles are for the iframes to fit in the container div with full height and width */
 /* For 16:9 aspect ratio */
 .video-container-16-9 {
@@ -803,7 +802,7 @@ html[data-theme='dark'] .navbar {
     overflow: hidden;
     width: 90%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-  }
+}
 
 /* For 4:3 aspect ratio */
 .video-container-4-3 {
@@ -820,7 +819,7 @@ html[data-theme='dark'] .navbar {
     width: 90%;
     padding-top: 66.66%; /* 3:2 Aspect Ratio (divide 3 by 2 = 0.6666) */
 }
-  
+
 /* This style allows the iframe to fit in the container div with full height and width */
 .video-responsive-iframe {
     position: absolute;
@@ -842,7 +841,6 @@ html[data-theme='light'] .docItemCol_VOVn {
 
 html[data-theme='dark'] .docItemCol_VOVn {
     background-color: #272729;
-    color: #000000;
     border: #444950 1px solid;
     padding: 20px;
 }
