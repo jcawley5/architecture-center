@@ -2,9 +2,9 @@
 ############################################################
 #                Beginning of Front Matter                 #
 ############################################################
-id: id-ra0008 # [DO NOT MODIFY]
+id: id-ra0009 # [DO NOT MODIFY]
 slug: /ref-arch/f764cc1375 # [DO NOT MODIFY]
-sidebar_position: 8 # [DO NOT MODIFY] 
+sidebar_position: 9 # [DO NOT MODIFY] 
 sidebar_custom_props: # [DO NOT MODIFY]
   category_index: []
 ############################################################
@@ -39,8 +39,6 @@ SAP Task Center enables integration with SAP applications to provide a single en
 You can use SAP Task Center as a unified inbox for tasks across multiple applications with integrated user experience. Tasks from multiple SAP solutions are gathered in one list and are ready to be processed in just one click, shortening the completion time for business-critical tasks. For example, business users can process all their tasks from the connected systems, without the need to switch and log in separately into different inboxes.
 
 This reference architecture also refers to the Process Automation cross use case pattern of the SAP Integration Solution Advisory Methodology.
-<!-- The Solution Diagram in SVG format should appear before the drawio "image" -->
-![image](images/establish-a-central-inbox-with-sap-task-center.svg)
 
 <!-- The drawio "image" should appear right after the Solution Diagram SVG image -->
 ![drawio](drawio/establish-a-central-inbox-with-sap-task-center.drawio)

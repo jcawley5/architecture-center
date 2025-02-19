@@ -2,7 +2,7 @@
 ############################################################
 #                Beginning of Front Matter                 #
 ############################################################
-id: id-ra0008-1  # [DO NOT MODIFY]
+id: id-ra0009-1  # [DO NOT MODIFY]
 slug: /ref-arch/f764cc1375/1 # [DO NOT MODIFY]
 sidebar_position: 1 # [DO NOT MODIFY] 
 sidebar_custom_props: # [DO NOT MODIFY]
@@ -39,9 +39,6 @@ last_update:
 <!-- Add the 'why?' for this architecture. Why do we have it? What is its pupose -->
 
 ## Architecture
-
-<!-- The Solution Diagram in SVG format should appear before the drawio "image" -->
-![image](images/dummy.svg)
 
 <!-- The drawio "image" should appear right after the Solution Diagram SVG image -->
 ![drawio](drawio/dummy.drawio)
