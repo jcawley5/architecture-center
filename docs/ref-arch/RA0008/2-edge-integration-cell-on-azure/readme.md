@@ -41,11 +41,12 @@ SAP Integration Suite – Edge Integration Cell (EIC) can be deployed on Azure t
 
 ## Architecture
 
-![Basic Setup](./drawio/sap-edge-integration-cell-azure-Basicv2.drawio)
-![High Availability Setup](./drawio/sap-edge-integration-cell-azure-HAv2.drawio)
+![Basic Setup](./images/sap-EIC-azure-Basic.svg)
+
+![High Availability Setup](./images/sap-EIC-azure-HA.svg)
 
 ## Overview
-Deploying EIC on Azure requires a secure, scalable, and resilient infrastructure that adheres to enterprise compliance and hybrid cloud best practices. This setup ensures that sensitive data stays within a private AWS environment while leveraging SAP Integration Suite in the cloud for design, monitoring, and lifecycle management.  
+Deploying EIC on Azure requires a secure, scalable, and resilient infrastructure that adheres to enterprise compliance and hybrid cloud best practices. This setup ensures that sensitive data stays within a private Azure environment while leveraging SAP Integration Suite in the cloud for design, monitoring, and lifecycle management.  
 
 
 ### Azure Setup
@@ -104,7 +105,7 @@ EIC requires multiple storage solutions for transaction logs, runtime data, and 
 - Set up **Single Sign-On (SSO)** for secure repository access, including monitoring and logging.  
 
 #### 3. Add an Edge Node and Bootstrap to Kubernetes
-- Add an **Edge Node** in Edge Lifecycle Management (ELM) and bootstrap it to your **Azure AKS cluster** running in your private AWS landscape.   
+- Add an **Edge Node** in Edge Lifecycle Management (ELM) and bootstrap it to your **Azure AKS cluster** running in your private Azure landscape.   
 
 ## Resources
 
