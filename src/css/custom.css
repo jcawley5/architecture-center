@@ -842,6 +842,7 @@ html[data-theme='light'] .docItemCol_VOVn {
 html[data-theme='dark'] .docItemCol_VOVn {
     background-color: #272729;
     border: #444950 1px solid;
+    color: #ffffff;
     padding: 20px;
 }
 
