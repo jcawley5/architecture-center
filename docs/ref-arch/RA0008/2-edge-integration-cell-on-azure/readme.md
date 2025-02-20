@@ -40,9 +40,9 @@ last_update:
 SAP Integration Suite – Edge Integration Cell (EIC) can be deployed on Azure to leverage its scalable infrastructure while maintaining secure and controlled execution in a customer-managed environment. This architecture combines Azure-native services with EIC’s hybrid capabilities, ensuring a seamless integration experience.
 
 ## Architecture
-
+### Basic Setup
 ![Basic Setup](./images/sap-EIC-azure-Basic.svg)
-
+### High Availability Setup
 ![High Availability Setup](./images/sap-EIC-azure-HA.svg)
 
 ## Overview
