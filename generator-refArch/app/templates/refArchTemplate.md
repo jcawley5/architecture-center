@@ -2,10 +2,12 @@
 ############################################################
 #                Beginning of Front Matter                 #
 ############################################################
-id: <%= id %> # [DO NOT MODIFY]
-slug: <%= slug %> # [DO NOT MODIFY]
-sidebar_position: <%= sidebar_position %> # [DO NOT MODIFY] 
-sidebar_custom_props: # [DO NOT MODIFY]
+#                     [DO NOT MODIFY]                      #
+############################################################
+id: <%= id %> 
+slug: <%= slug %> 
+sidebar_position: <%= sidebar_position %> 
+sidebar_custom_props: 
   category_index: 
     - aws
     - gcp
@@ -36,15 +38,12 @@ last_update:
 ############################################################
 ---
 
-<!-- Add the 'why?' for this architecture. Why do we have it? What is its pupose -->
+<!-- Add the 'why?' for this architecture. Why do we have it? What is its purpose -->
 
 ## Architecture
 
-<!-- The Solution Diagram in SVG format should appear before the drawio "image" -->
-![image](images/dummy.svg)
-
 <!-- The drawio "image" should appear right after the Solution Diagram SVG image -->
-![drawio](drawio/dummy.drawio)
+<!-- ![drawio](drawio/<your-file>.drawio) -->
 
 ## Flow
 

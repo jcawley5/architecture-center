@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 slug: /front-matter
 title: Front Matter
 sidebar_label: Front Matter
@@ -16,12 +16,9 @@ toc_max_heading_level: 4
 draft: false
 unlisted: false
 contributors:
-  - navyakhurana
-  - cernus76
-  - jmsrpp
 last_update:
-  author: navyakhurana
-  date: 2025-01-20
+  author: cernus76
+  date: 2025-02-19
 ---
 
 The Front Matter plays a crucial role in reference architectures. It defines key aspects such as SEO details, along with essential technical information like the slug (URL), sidebar position, and the date of the last update.

@@ -30,7 +30,7 @@ integration:
 
 cap:
   label: "CAP"
-  description: "SAP Cloud Application Programming (CAP) is a framework for building enterprise-grade applications. It provides a set of tools and libraries that help developers create scalable, secure, and modular applications."
+  description: "SAP Cloud Application Programming Model (CAP) is a framework of languages, libraries, and tools for building enterprise-grade services and applications. It guides developers along a path of proven best practices and a great wealth of out-of-the-box solutions to recurring tasks."
 
 abap:
   label: "ABAP"
@@ -43,6 +43,10 @@ security:
 eda:
   label: "Event-Driven Architecture"
   description: "An event-driven architecture (EDA) is an integration model built to publish, capture, process, and respond to events across distributed systems in real time. When an event occurs in one application, a message is automatically sent to all the other applications that need to know about it, so they can act on it in turn."
+
+eic:
+  label: "Edge Integration Cell"
+  description: "Edge Integration Cell (EIC), part of the SAP Integration Suite, brings a powerful hybrid integration runtime that bridges the gap between the cloud and your private landscape. It provides the flexibility to seamlessly manage APIs and run integration scenarios within a controlled environment, combining the best of both worlds."
 
 # generic tags generally not used except for testing
 
