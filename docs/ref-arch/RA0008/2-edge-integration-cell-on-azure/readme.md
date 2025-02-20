@@ -18,9 +18,9 @@ sidebar_custom_props:
 title: Edge Integration Cell on Azure
 description: Explore the reference architecture for deploying SAP Integration Suite - Edge Integration Cell on Azure. Learn about the required resources, and key considerations for setup and implementation on Azure.
 sidebar_label: Edge Integration Cell on Azure
-keywords: [azure, eic, edge integration cell]
-image: 
-tags: [azure, eic]
+keywords: [azure,eic]
+image: img/logo.svg
+tags: [azure,eic]
 hide_table_of_contents: false
 hide_title: false
 toc_min_heading_level: 2
@@ -40,12 +40,11 @@ last_update:
 SAP Integration Suite – Edge Integration Cell (EIC) can be deployed on Azure to leverage its scalable infrastructure while maintaining secure and controlled execution in a customer-managed environment. This architecture combines Azure-native services with EIC’s hybrid capabilities, ensuring a seamless integration experience.
 
 ## Architecture
-### Basic Setup
-![Basic Setup](./images/sap-EIC-azure-Basic.svg)
-### High Availability Setup
-![High Availability Setup](./images/sap-EIC-azure-HA.svg)
+
+![drawio](drawio/sap-edge-integration-cell-azure.drawio)
 
 ## Overview
+
 Deploying EIC on Azure requires a secure, scalable, and resilient infrastructure that adheres to enterprise compliance and hybrid cloud best practices. This setup ensures that sensitive data stays within a private Azure environment while leveraging SAP Integration Suite in the cloud for design, monitoring, and lifecycle management.  
 
 
@@ -65,8 +64,10 @@ To ensure a **secure and private execution environment**, create a **[Virtuan Ne
 
 - **Internet Access Control for EIC**:
   - **[NAT Gateways](https://learn.microsoft.com/en-us/azure/nat-gateway/nat-overview)**: Azure NAT Gateway components in private subnets to securely access external services without exposing internal EIC workloads to the internet.
-  - **[Internet Gateway](https://azure.microsoft.com/en-us/products/azure-nat-gateway)**: For EIC runtime components that need outbound internet access, the Internet Gateway enables the necessary connectivity.
-  - **[Security Groups](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview)** and **[IP Based Network ACLs](https://learn.microsoft.com/en-us/azure/virtual-network/ip-based-access-control-list-overview)**: These are used to enforce strict access control, ensuring secure communication between EIC components.
+  
+  - **[Public IP Addresses](https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses)**: For EIC runtime components that require outbound internet access, Public IP addresses can be assigned directly or via an Azure Load Balancer to enable necessary connectivity.  
+
+  - **[Network Security Groups](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview)** and **[IP Based Network ACLs](https://learn.microsoft.com/en-us/azure/virtual-network/ip-based-access-control-list-overview)**: These are used to enforce strict access control, ensuring secure communication between EIC components.
 
 
 #### 2. Azure AKS Cluster  
@@ -87,12 +88,12 @@ EIC workloads require a **containerized runtime**, making **[Azure Kubernetes Se
 
 EIC requires multiple storage solutions for transaction logs, runtime data, and caching.
 
-- **Azure PostgreSQL RDS**  
-  - **[Azure RDS for PostgreSQL](https://azure.microsoft.com/en-ca/products/postgresql/?ef_id=_k_Cj0KCQiAwtu9BhC8ARIsAI9JHanckghAmiPvL8qvi_nfi1zhYHFW3Z0hIV3E_WIGpmnJjfs6rvd5BGQaAkISEALw_wcB_k_&OCID=AIDcmmqz3gd78m_SEM__k_Cj0KCQiAwtu9BhC8ARIsAI9JHanckghAmiPvL8qvi_nfi1zhYHFW3Z0hIV3E_WIGpmnJjfs6rvd5BGQaAkISEALw_wcB_k_&gad_source=1&gclid=Cj0KCQiAwtu9BhC8ARIsAI9JHanckghAmiPvL8qvi_nfi1zhYHFW3Z0hIV3E_WIGpmnJjfs6rvd5BGQaAkISEALw_wcB)** is recommended for EIC.
-  - Enable **[AKS Multi-AZ replication](https://learn.microsoft.com/en-us/azure/storage/container-storage/enable-multi-zone-redundancy)** for high availability.
+- **Azure Database for PostgreSQL**  
+  - **[Azure Database for PostgreSQL](https://azure.microsoft.com/en-ca/products/postgresql/?ef_id=_k_Cj0KCQiAwtu9BhC8ARIsAI9JHanckghAmiPvL8qvi_nfi1zhYHFW3Z0hIV3E_WIGpmnJjfs6rvd5BGQaAkISEALw_wcB_k_&OCID=AIDcmmqz3gd78m_SEM__k_Cj0KCQiAwtu9BhC8ARIsAI9JHanckghAmiPvL8qvi_nfi1zhYHFW3Z0hIV3E_WIGpmnJjfs6rvd5BGQaAkISEALw_wcB_k_&gad_source=1&gclid=Cj0KCQiAwtu9BhC8ARIsAI9JHanckghAmiPvL8qvi_nfi1zhYHFW3Z0hIV3E_WIGpmnJjfs6rvd5BGQaAkISEALw_wcB)** is recommended for EIC.
+  - Enable **[Multi-AZ replication](https://learn.microsoft.com/en-us/azure/reliability/reliability-postgresql-flexible-server)** for high availability.
 
-- **Azure RedisCache**  
-  - **[Azure RedisCache](https://azure.microsoft.com/en-ca/products/cache/?ef_id=_k_Cj0KCQiAwtu9BhC8ARIsAI9JHakLVqdO5TEkgDIz5U2E5xUnS-j_huvw4zf8bUr8C4xQo8N_NSXfgw0aAtpvEALw_wcB_k_&OCID=AIDcmmqz3gd78m_SEM__k_Cj0KCQiAwtu9BhC8ARIsAI9JHakLVqdO5TEkgDIz5U2E5xUnS-j_huvw4zf8bUr8C4xQo8N_NSXfgw0aAtpvEALw_wcB_k_&gad_source=1&gclid=Cj0KCQiAwtu9BhC8ARIsAI9JHakLVqdO5TEkgDIz5U2E5xUnS-j_huvw4zf8bUr8C4xQo8N_NSXfgw0aAtpvEALw_wcB)** helps reduce latency by caching frequently accessed EIC runtime data using Redis
+- **Azure Cache for Redis**  
+  - **[Azure Cache for Redis](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview)** helps reduce latency by caching frequently accessed EIC runtime data using Redis
 
 ### SAP Setup
 
@@ -101,7 +102,7 @@ EIC requires multiple storage solutions for transaction logs, runtime data, and 
 - Assign the necessary roles to enable access to **Edge Lifecycle Management (ELM)** for managing and monitoring Edge nodes.  
 
 #### 2. Configure a Technical User and Set Up SSO 
-- Create a **technical users** (**[P-User](https://help.sap.com/docs/EDGE_LIFECYCLE_MANAGEMENT/9d5719aae5aa4d479083253ba79c23f9/edcd1a455afb4cb0b6b1b3d148256468.html)** and **[S-User](https://www.sap.com/account/universal-id.html)**) to interact with the SAP systems and to access SAP repository based shipment channel.  
+- Create **technical users** (**[P-User](https://help.sap.com/docs/EDGE_LIFECYCLE_MANAGEMENT/9d5719aae5aa4d479083253ba79c23f9/edcd1a455afb4cb0b6b1b3d148256468.html)** and **[S-User](https://www.sap.com/account/universal-id.html)**) to interact with the SAP systems and to access SAP repository based shipment channel.  
 - Set up **Single Sign-On (SSO)** for secure repository access, including monitoring and logging.  
 
 #### 3. Add an Edge Node and Bootstrap to Kubernetes
