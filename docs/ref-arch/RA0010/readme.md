@@ -44,6 +44,8 @@ Additionally, it empowers business users with intuitive editors, allowing them t
 
 This reference architecture also refers to the UI integration use case pattern of the SAP Integration Solution Advisory Methodology.
 
+## Architecture
+
 <!-- The drawio "image" should appear right after the Solution Diagram SVG image -->
 ![drawio](drawio/SAP_Build_Work_Zone.drawio)
 
