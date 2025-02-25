@@ -10,9 +10,9 @@ sidebar_custom_props:
 ############################################################
 #     You can modify the front matter properties below     #
 ############################################################
-title: SAP Task Center
+title: Establish a central inbox with SAP Task Center
 description: Guidance for setting up SAP Task Center service on SAP BTP. Learn about the architecture components and flow in this architecture.
-sidebar_label: SAP Task Center
+sidebar_label: Establish a central inbox with SAP Task Center
 keywords: [sap, btp, cloud, task center]
 image: img/logo.svg
 tags: [aws, azure, gcp, appdev]
@@ -33,8 +33,6 @@ last_update:
 ---
 
 <!-- Add the 'why?' for this architecture. Why do we have it? What is its purpose -->
-
-## Establish a central inbox with SAP Task Center
 
 SAP Task Center enables integration with SAP applications to provide a single entry point for end users to access all their assigned tasks. The tasks can be accessed by end users through the SAP Task Center UI clients.
 
