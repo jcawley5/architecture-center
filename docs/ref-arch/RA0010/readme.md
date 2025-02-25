@@ -10,6 +10,7 @@ sidebar_custom_props:
     - aws
     - gcp
     - azure
+    - appdev
 ############################################################
 #     You can modify the front matter properties below     #
 ############################################################
@@ -18,7 +19,7 @@ description: SAP Build Work Zone offers a comprehensive solution architecture de
 sidebar_label: Establish a central entry point with SAP Build Work Zone
 keywords: [sap, btp, cloud, build work zone]
 image: img/logo.svg
-tags: [appdev, buildworkzone]
+tags: [aws, azure, gcp, appdev, buildworkzone]
 hide_table_of_contents: false
 hide_title: false
 toc_min_heading_level: 2
