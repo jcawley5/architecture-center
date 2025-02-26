@@ -266,13 +266,13 @@ html[data-theme='dark'] .menu__list {
 
 .menu__list-item > a {
     display: block;
-    color: inherit;
+
     text-decoration: none;
     position: relative;
 }
 
 .menu__list-item .menu__list {
-    margin-left: 10px; /* Indent the sub-list */
+    margin-left: 15px; /* Indent the sub-list */
     padding-left: 10px;
     border-left: 2px solid var(--ifm-color-gray-500); /* Vertical line */
 }
@@ -292,11 +292,11 @@ html[data-theme='dark'] .menu__list {
 
 .menu__list-item-collapsible--active > .menu__link {
     background-color: var(--ifm-sidebar-selected-item-background-color);
-    color: var(--ifm-menu-color-active);
+    color: var(--ifm-menu-color-active) !important;
 }
 
 .menu__list-item > .menu__link--active {
-    color: var(--ifm-menu-color-active);
+    color: var(--ifm-menu-color-active) !important;
 }
 
 .menu__link:not(.menu__link--active):hover {
@@ -836,14 +836,14 @@ html[data-theme='light'] .docItemCol_VOVn {
     background-color: #ffffff;
     color: #000000;
     border: #dadde1 1px solid;
-    padding: 20px;
+    padding: 35px;
 }
 
 html[data-theme='dark'] .docItemCol_VOVn {
     background-color: #272729;
     border: #444950 1px solid;
     color: #ffffff;
-    padding: 20px;
+    padding: 35px;
 }
 
 html[data-theme='light'] .theme-last-updated {
