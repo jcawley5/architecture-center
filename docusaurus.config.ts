@@ -54,44 +54,6 @@ const config: Config = {
                 removeDefaultStemmer: true,
             },
         ],
-        // for assets loaded like: import DrawioFile from './drawio/demo.drawio?bin';
-        function myCustomPluginBin(context, options) {
-            return {
-                name: 'custom-webpack-plugin-1',
-                configureWebpack(config, isServer, utils, content) {
-                    return {
-                        module: {
-                            rules: [
-                                {
-                                    resourceQuery: /bin/,
-                                    type: 'asset/resource',
-                                    generator: { filename: '[name]-[hash][ext]' },
-                                },
-                            ],
-                        },
-                    };
-                },
-            };
-        },
-        // for assets loaded like: import DrawioFile from './drawio/demo.drawio';
-        function myCustomPluginDrawio(context, options) {
-            return {
-                name: 'custom-webpack-plugin-2',
-                configureWebpack(config, isServer, utils, content) {
-                    return {
-                        module: {
-                            rules: [
-                                {
-                                    test: /\.drawio$/,
-                                    type: 'asset/resource',
-                                    generator: { filename: '[name]-[hash][ext]' },
-                                },
-                            ],
-                        },
-                    };
-                },
-            };
-        },
         async function tailwindcss() {
             return {
                 name: 'docusaurus-tailwindcss',
@@ -102,6 +64,7 @@ const config: Config = {
                 },
             };
         },
+        './src/plugins/asset-types'
     ],
 
     i18n: {
