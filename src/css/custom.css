@@ -768,6 +768,11 @@ html[data-theme='light'] .navbar {
     backdrop-filter: blur(10px);
 }
 
+.navbar__item {
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
 html[data-theme='light'] .footer {
     background-color: #e0e0e0;
 }
