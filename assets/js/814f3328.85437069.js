@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksap_architecture_center=self.webpackChunksap_architecture_center||[]).push([[7472],{55513:e=>{e.exports=JSON.parse('{"title":"Architecture Center news","items":[{"title":"SAP Architecture Center","permalink":"/blog/2025/01/29/launch-of-architecture-center","unlisted":false,"date":"2025-01-29T00:00:00.000Z"}]}')}}]);
