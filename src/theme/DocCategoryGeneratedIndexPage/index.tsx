@@ -69,7 +69,7 @@ function DocCategoryGeneratedIndexPageContent({ categoryGeneratedIndex }: Props)
     }, [colorMode]);
 
     const category = useCurrentSidebarCategory();
-    const isExplorePage = category?.customProps?.id === 'explore';
+    const isExplorePage = category?.customProps?.id === 'exploreallrefarch';
 
     const selectStyles = useMemo(() => getSelectStyles(isDarkMode), [isDarkMode]);
 
@@ -119,9 +119,9 @@ function DocCategoryGeneratedIndexPageContent({ categoryGeneratedIndex }: Props)
 
             return (
                 (selectedPartners.length === 0 ||
-                    selectedPartners.some((partner) => categoryIndex.includes(partner.value))) &&
+                    selectedPartners.every((partner) => categoryIndex.includes(partner.value))) &&
                 (selectedTechDomains.length === 0 ||
-                    selectedTechDomains.some((domain) => categoryIndex.includes(domain.value)))
+                    selectedTechDomains.every((domain) => categoryIndex.includes(domain.value)))
             );
         });
     }, [isExplorePage, isResetEnabled, preFilteredItems, selectedPartners, selectedTechDomains]);
@@ -153,13 +153,13 @@ function DocCategoryGeneratedIndexPageContent({ categoryGeneratedIndex }: Props)
                         <aside className={styles.filters}>
                             <div className={styles.filterRow}>
                                 <div className={styles.filterGroup}>
-                                    <h4 className={styles.filterGroupLabel}>Partners</h4>
+                                    <h4 className={styles.filterGroupLabel}>Technology Partners</h4>
                                     <Select
                                         isMulti
                                         options={partners}
                                         value={selectedPartners}
                                         onChange={handlePartnersChange}
-                                        placeholder="Select Partners..."
+                                        placeholder="Select Technology Partners..."
                                         styles={selectStyles}
                                     />
                                 </div>

@@ -2,14 +2,13 @@ import { FlexBox, Button } from '@ui5/webcomponents-react';
 import Admonition from '@theme/Admonition';
 import Link from '@docusaurus/Link';
 import LinkDrawioViewer from './LinkDrawioViewer';
-import '@ui5/webcomponents-icons/dist/download.js';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 // eventually, the drawio image won't be there locally. we'll generate it before deployment
 // locally, use fallback image
 const FALLBACK_IMG = '/img/fallback-drawio-img.svg';
 
-export default function DrawioResources({ drawioFile, drawioImg }) {
+export default function DrawioResources({ drawioFile, drawioXml, drawioImg }) {
     const path = useBaseUrl(FALLBACK_IMG);
     return (
         // current selector to apply zoom (see docusaurus.config) doesn't select img if directly
@@ -21,7 +20,8 @@ export default function DrawioResources({ drawioFile, drawioImg }) {
                     loading="lazy"
                     src={drawioImg ?? path}
                     alt="image of solution diagram"
-                    style={{ height: 'auto' }}
+                    className={drawioImg ? '' : 'fallback-image'}
+                    style={{ height: 'auto'}}
                 />
             </p>
             <Admonition type="info" title="Solution Diagram Resources">
@@ -39,11 +39,11 @@ export default function DrawioResources({ drawioFile, drawioImg }) {
                     style={{ marginTop: 22, gap: '8px normal' }}
                 >
                     <a href={drawioFile} download>
-                        <Button design="Emphasized" icon="download">
-                            Download as .drawio file
+                        <Button design="Emphasized" style={{ width: 150 }}>
+                            Download
                         </Button>
                     </a>
-                    <LinkDrawioViewer drawioFile={drawioFile} />
+                    <LinkDrawioViewer drawioXml={drawioXml} />
                 </FlexBox>
             </Admonition>
         </>
