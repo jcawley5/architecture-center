@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksap_architecture_center=self.webpackChunksap_architecture_center||[]).push([[10890],{10890:(e,c,r)=>{r.d(c,{createInfoServices:()=>t.v});var t=r(97021);r(19369)}}]);
