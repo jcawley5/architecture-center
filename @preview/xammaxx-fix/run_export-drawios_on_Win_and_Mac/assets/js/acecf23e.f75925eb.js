@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksap_architecture_center=self.webpackChunksap_architecture_center||[]).push([[81903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/@preview/xammaxx-fix/run_export-drawios_on_Win_and_Mac/blog","blogTitle":"SAP Architecture Center - News","authorsListPath":"/@preview/xammaxx-fix/run_export-drawios_on_Win_and_Mac/blog/authors"}')}}]);
