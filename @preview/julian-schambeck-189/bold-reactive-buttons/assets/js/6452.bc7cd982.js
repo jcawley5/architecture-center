@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksap_architecture_center=self.webpackChunksap_architecture_center||[]).push([[6452],{6452:(e,c,r)=>{r.d(c,{createPacketServices:()=>t.$});var t=r(71609);r(19369)}}]);
