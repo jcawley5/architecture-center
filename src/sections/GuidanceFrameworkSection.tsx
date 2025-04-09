@@ -75,7 +75,8 @@ export default function ExploreAllArchitecturesSection() {
         <Title style={{marginBottom: "10px"}}>Explore the SAP BTP Guidance Framework</Title>
         <FlexBox justifyContent="End" alignItems="Center" className={styles.headerRow}>          
           <FlexBox alignItems="Center" style={{ gap: "10px" }}>
-            <Button         
+            <Text className={styles.hideOnMobile}  style={{ fontWeight: "bold" }}>Browse</Text>
+            <Button
               design={canGoLeft ? "Emphasized" : "Transparent"}
               icon="navigation-left-arrow"
               onClick={goPrevious}
