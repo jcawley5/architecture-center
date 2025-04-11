@@ -59,6 +59,11 @@
     font-weight: normal;
 }
 
+ui5-button::part(button) {
+    font-weight: bold;
+    font-family: '72';
+}
+
 /* General list item styling */
 .menu__list-item {
     font-size: 14px; /* Adjust the font size as needed */
@@ -105,14 +110,13 @@
 }
 
 .welcome {
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .hero_banner {
-    background-image: url('/img/landingPage/Architecture_Center_banner2_rounded_1440x424.png');
+    background-image: url('/img/landingPage/architecture_center_banner5_rounded_1440x424_light.png');
     width: 100%;
     height: 424px;
-    position: fixed;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -120,8 +124,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
     position: relative;
+}
+
+/* Adding dark mode to the landing page banner */
+[data-theme='dark'] .hero_banner {
+    background-image: url('/img/landingPage/architecture_center_banner5_rounded_1440x424_dark.png');
 }
 
 .community {
@@ -129,7 +137,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 4rem 0;
     margin: 0 auto;
     max-width: 1200px;
     gap: 8rem;
@@ -182,7 +189,7 @@
     }
 
     .welcome {
-        margin-top: 1.5rem; /* Reduce unnecessary spacing */
+        margin-top: 1rem; /* Reduce unnecessary spacing */
         text-align: left;
     }
 
@@ -209,6 +216,7 @@
 
     .community {
         flex-direction: column;
+        gap: 3rem;
     }
 }
 
@@ -218,7 +226,7 @@
     }
 
     .welcome {
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         justify-content: left;
     }
 
@@ -238,7 +246,7 @@
     }
 
     .community_image {
-        width: 100%;
+        width: 90%;
     }
 }
 
@@ -370,6 +378,13 @@ html[data-theme='dark'] .sourcecode-badge {
     word-wrap: break-word;
 }
 
+/* Center all markdown images */
+.markdown img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .admonitionHeading_Gvgb {
     text-transform: none !important;
 }
@@ -458,7 +473,7 @@ table thead {
     margin-left: 0rem;
     margin-right: 0px;
     color: #000000;
-    height: 270px;
+    height: 290px;
 }
 
 @media screen and (max-width: 996px) {
