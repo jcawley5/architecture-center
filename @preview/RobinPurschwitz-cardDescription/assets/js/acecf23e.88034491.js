@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksap_architecture_center=self.webpackChunksap_architecture_center||[]).push([[81903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/@preview/RobinPurschwitz-cardDescription/blog","blogTitle":"SAP Architecture Center - News","authorsListPath":"/@preview/RobinPurschwitz-cardDescription/blog/authors"}')}}]);
