@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksap_architecture_center=self.webpackChunksap_architecture_center||[]).push([[57723],{57723:(e,c,r)=>{r.d(c,{createPieServices:()=>t.f});var t=r(11066);r(19369)}}]);
