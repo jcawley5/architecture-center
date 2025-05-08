@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksap_architecture_center=self.webpackChunksap_architecture_center||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/@preview/peterfendt-patch-2/blog","blogTitle":"SAP Architecture Center - News","authorsListPath":"/@preview/peterfendt-patch-2/blog/authors"}')}}]);
