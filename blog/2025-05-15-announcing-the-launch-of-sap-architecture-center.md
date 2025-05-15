@@ -1,5 +1,5 @@
 ---
-title: Announcing the Launch of SAP Architecture Center
+title: Launching the SAP Architecture Center
 description: The SAP Architecture Center centralizes all resources in one place, enabling organizations to maximize cloud capabilities while ensuring that their solutions are secure, resilient, and optimized to their specific requirements.
 authors: [ anirban-sap ]
 keywords: ["SAP Architecture Center", "Reference Architecture", "SAP BTP"]
@@ -7,7 +7,7 @@ hide_table_of_contents: true
 date: 2025-05-15
 ---
 
-## Launching the SAP Architecture Center!
+## Launching the SAP Architecture Center
 
 I'm pleased to announce that my team at the Office of the CTO, SAP, has officially launched the [SAP Architecture Center on the SAP Learning Center](https://architecture.learning.sap.com/).
 
@@ -27,11 +27,11 @@ I'm pleased to announce that my team at the Office of the CTO, SAP, has official
 2. **Integration with Learning Journeys**: Enhanced integration with SAP Learning Center Learning Journeys for certifications and accreditations, along with closer alignment with SAP Discovery Center’s service catalog and missions.
 3. **Expanded Architectures**: New architectures in data and agentic AI—including open-source collaborations such as A2A interoperability—and additional architectures addressing non-functional requirements like HA/DR, security, and observability.
 
-Special acknowledgment to Philipp Herzig and Andre Bechtold for sponsorship, the core team: James Rapp, Pierre-Olivier Basseville, Navya Khurana, Fabian Lehmann, Michael Still, Marina Noble, Julian, Johanna, Vedant, Gabriel, Robin, Max, Jonas, Praveen, and all contributors.
+Special acknowledgment to [Philipp Herzig](https://www.linkedin.com/in/philipp-herzig/) and [Andre Bechtold](https://www.linkedin.com/in/abechtold/) for sponsorship, the core team: [James Rapp](https://www.linkedin.com/in/james-rapp/), [Pierre-Olivier Basseville](https://www.linkedin.com/in/pierreolivierbasseville/), [Navya Khurana](https://www.linkedin.com/in/navya-khurana-1b78a6187/), [Fabian Lehmann](https://www.linkedin.com/in/lehmann-fabian/), [Michael Still](https://www.linkedin.com/in/michael-still-b3aaa2133/), [Marina Noble](https://www.linkedin.com/in/marinanoble/), [Julian Schambeck](https://www.linkedin.com/in/julian-s-41b9a8253/), [Johanna Gonzalez](https://www.linkedin.com/in/johannagondi/), [Vedant Gupta](https://www.linkedin.com/in/vedant-gupta-ai/), [Gabriel Kevorkian](https://www.linkedin.com/in/gabriel-kevorkian-30005b2/), [Robin Purschwitz](https://www.linkedin.com/in/robin-purschwitz/), [Max Lienhardt](https://www.linkedin.com/in/max-lienhardt-a2a157335/), Jonas Mohr, [Praveen Padegal](https://www.linkedin.com/in/praveenkumarpadegal/), and all contributors.
 
-Join us in shaping the future of SAP architecture."
+Join us in shaping the future of SAP architecture.
 
- [Start contributing](/community/contribution) today.
+[Start contributing](/community/contribution) today!
 
 Anirban
 Office of the CTO
