@@ -6,7 +6,7 @@ sidebar_label: Front Matter
 keywords:
  - sap
  - front matter
-image: img/logo.svg
+image: img/ac-soc-med.png
 tags:
   - community
 hide_table_of_contents: false

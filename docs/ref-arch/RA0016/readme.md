@@ -21,7 +21,7 @@ keywords:
   - gcp
   - azure
 sidebar_label: Secure Service Consumption Across Hyperscalers
-image: img/logo.svg
+image: img/ac-soc-med.png
 tags:
   - security
   - aws
@@ -49,15 +49,23 @@ The following reference architectures illustrate how federated authentication ca
 
 ## Architecture
 
-<Tabs>
-  <TabItem value="aws" label="Amazon Web Services">
-           ![drawio](./1-secure-service-consumption-on-aws/drawio/oidc-sts.drawio)
+<Tabs
+  defaultValue="aws"
+  values={[
+    {label: 'Amazon Web Services', value: 'aws'},
+    {label: 'Google Cloud Platform', value: 'gcp'}
+  ]}>
+
+  <TabItem value="aws">
+    ![drawio](drawio/oidc-sts.drawio)
   </TabItem>
-  
-  <TabItem value="gcp" label="Google Cloud Platform">
-         ![drawio](./2-secure-service-consumption-on-gcp/drawio/gcp-oidc.drawio)
+
+  <TabItem value="gcp">
+    ![drawio](drawio/gcp-oidc.drawio)
   </TabItem>
+
 </Tabs>
+
 
 ## Flow
 
