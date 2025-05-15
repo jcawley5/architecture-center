@@ -21,6 +21,13 @@ I'm pleased to announce that my team at the Office of the CTO, SAP, has official
 - Collective enhancement and evolution of architectures.
 - Structured governance with clear review and approval workflows.
 
+### Architecture Center Vision
+![Architecture Center Vision](images/architecture-center-vision-2.png)
+
+:::info Disclaimer
+This diagram represents the holistic vision of the SAP Architecture Center, combining both current capabilities and future roadmap elements. Some features are forward-looking and may evolve over time as the platform continues to develop.
+:::
+
 
 **What's next?** SAPPHIRE 2025 was our initial launch milestone, marking the start of this journey. Moving forward, we have several strategic enhancements planned:
 1. **Automated Architecture Validator** with Joule Interface: Solution diagrams will include embedded service metadata, enabling AI-powered automated validation and testing through Joule.
