@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksap_architecture_center=self.webpackChunksap_architecture_center||[]).push([[81903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/@preview/maxstreifeneder-patch-1/blog","blogTitle":"SAP Architecture Center - News","authorsListPath":"/@preview/maxstreifeneder-patch-1/blog/authors"}')}}]);
