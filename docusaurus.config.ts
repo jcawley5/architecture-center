@@ -11,8 +11,8 @@ const config: Config = {
         'SAP Architecture Center empowers architects and developers with best practices, reference architectures, and community-driven guidance for designing, integrating, and optimizing SAP and cloud solutions. Accelerate innovation, ensure security, and reduce costs with proven frameworks and collaborative expertise for enterprise transformation.',
     favicon: 'img/logo.svg',
 
-    url: 'https://architecture.learning.sap.com',
-    baseUrl: '/',
+    url: 'https://jcawley5.github.io/',
+    baseUrl: 'architecture-center/',
 
     // GitHub pages deployment config.
     organizationName: 'SAP', //GitHub org
